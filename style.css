@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e6dede 0%, #e9e6ecec 100%);
+    font-family: 'Segoe UI', sans-serif;
+    background: url("wall.jpg") no-repeat;
+    background-size: cover;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: #023108c7;
+    box-shadow: 0 15px 15px rgba(51, 94, 37, 0.884);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.clock{
+    position: relative;
+    width: 360px;
+    height: 360px;
+    box-shadow: 0 0 20px #f8f3f3;
+    border-radius: 50%;
+    background: #cfc2c2;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.clock:hover{
+    box-shadow: 0 0 30px #d4f713;
+    transition: 0.5s;
+}
+.hour{
+    position: absolute;
+    width: 8px;
+    height: 130px;
+    background: #000000;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%) rotate(90deg);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.minute{
+    position: absolute;
+    width: 6px;
+    height: 165px;
+    background: #053a01c0;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%) rotate(180deg);
+    border-radius: 10px;
+}
+.second{
+    position: absolute;
+    width: 4px;
+    height: 175px;
+    background: #ff0000c7;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%) rotate(270deg);
+    border-radius: 10px;
+}
+.wall{
+    background: linear-gradient(135deg, #40664bdc 0%, #60d3adec 100%);
+        box-shadow: 0 0 25px rgba(96, 211, 173, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        transition: all 0.4s ease;
+        padding: 60px;
+        margin: 40px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+
+        .center-dot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            box-shadow: 0 0 15px red;
+        }
+    
+        
+        .number {
+            position: absolute;
+            font-size: 25px;
+            font-weight: bold;
+            color: #000;
+        }
+    
+        /* NUMBER POSITIONS */
+    
+        .number1 {
+            top: 35px;
+            right: 95px;
+        }
+    
+        .number2 {
+            top: 85px;
+            right: 40px;
+        }
+    
+        .number3 {
+            top: 160px;
+            right: 15px;
+        }
+    
+        .number4 {
+            bottom: 85px;
+            right: 40px;
+        }
+    
+        .number5 {
+            bottom: 35px;
+            right: 95px;
+        }
+    
+        .number6 {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .number7 {
+            bottom: 35px;
+            left: 95px;
+        }
+    
+        .number8 {
+            bottom: 85px;
+            left: 40px;
+        }
+    
+        .number9 {
+            top: 160px;
+            left: 15px;
+        }
+    
+        .number10 {
+            top: 85px;
+            left: 25px;
+        }
+    
+        .number11 {
+            top: 35px;
+            left: 80px;
+        }
+    
+        .number12 {
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+    
+        .clock {
+            overflow: hidden;
+            border: 8px solid rgba(245, 4, 4, 0.4);
+            backdrop-filter: blur(1000px);
+        }
+    
+        
+        .container:hover {
+            transform: scale(1.03);
+            transition: 0.5s;
+        }
+    
+    
+        .hour {
+            box-shadow: 0 0 10px black;
+        }
+    
+        .minute {
+            box-shadow: 0 0 15px green;
+        }
+    
+        .second {
+            box-shadow: 0 0 20px red;
+        }
+    
+        
+        .wall {
+            backdrop-filter: blur(20px);
+        }
+    
+        
+        .container {
+            animation: floating 3s ease-in-out infinite;
+        }
+    
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+    
+            50% {
+                transform: translateY(-10px);
+            }
+    
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+
+.theme-btn {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: 15px;
+
+    z-index: 1000;
+
+    width: max-content;
+}
+
+
+.theme-btns {
+
+    padding: 14px 30px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    overflow: hidden;
+    position: relative;
+
+    color: #ffffff;
+
+
+
+    background:
+        linear-gradient(135deg,
+            rgba(0, 255, 140, 0.45),
+            rgba(0, 120, 255, 0.45));
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 15px rgba(0, 255, 170, 0.5),
+        0 0 35px rgba(0, 140, 255, 0.3),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+
+    z-index: 999;
+
+ animation: floatBtn 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   HOVER EFFECT
+   ========================================= */
+
+.theme-btns:hover {
+
+   transform: scale(1.05);
+
+    box-shadow:
+        0 0 20px rgba(0, 255, 170, 0.7),
+        0 0 50px rgba(0, 140, 255, 0.5),
+        inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+.theme-btns:active {
+    transform: scale(0.95);
+}
+
+
+.theme-btns::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent);
+
+    transition: 0.7s;
+}
+
+.theme-btn:hover::before {
+    left: 120%;
+}
+
+
+
+@keyframes floatBtn {
+
+    0% {
+        translate: 0 0px;
+    }
+
+    50% {
+        translate: 0 -4px;
+    }
+
+    100% {
+        translate: 0 0px;
+    }
+}
+
+
+
+body.hashim-dark-mode {
+
+    background:
+        linear-gradient(135deg,
+            #050505,
+            #111827);
+}
+
+
+
+
+body.hashim-dark-mode .wall {
+
+    background:
+        linear-gradient(135deg,
+            #111827,
+            #1f2937);
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+body.hashim-dark-mode .clock {
+
+    background: #0f172a;
+
+    border:
+        8px solid rgba(0, 255, 255, 0.3);
+
+    box-shadow:
+        0 0 25px cyan;
+}
+
+
+
+
+body.hashim-dark-mode .number {
+
+    color: white;
+
+    text-shadow:
+        0 0 10px cyan;
+}
+
+
+
+body.hashim-dark-mode .center-dot {
+
+    background: cyan;
+
+    box-shadow:
+        0 0 20px cyan;
+}
+
+
+
+
+body.hashim-dark-mode .hour {
+
+    background: white;
+
+    box-shadow:
+        0 0 15px white;
+}
+
+
+
+
+body.hashim-dark-mode .minute {
+
+    background: cyan;
+
+    box-shadow:
+        0 0 20px cyan;
+}
+
+
+
+body.hashim-dark-mode .second {
+
+    background: red;
+
+    box-shadow:
+        0 0 20px red;
+}
+
+
+
+
+body.hashim-dark-mode .theme-btns {
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 170, 0, 0.6),
+            rgba(255, 60, 0, 0.6));
+
+    box-shadow:
+        0 0 15px rgba(255, 170, 0, 0.6),
+        0 0 40px rgba(255, 60, 0, 0.4);
+
+    color: white;
+}
+
+
+
+
+@media(max-width:768px) {
+
+
+    .theme-btns {
+
+        bottom: 15px;
+
+        right: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    .theme-btns {
+
+        padding: 10px 22px;
+
+        font-size: 14px;
+    }
+}
